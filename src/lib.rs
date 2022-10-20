@@ -40,6 +40,17 @@ pub fn binary_str2dec(mut bin:String) -> i128 {
     return decimal as i128;
 }
 
+pub fn binary_str2dec_str(mut bin:String) -> String {
+    let mut decimal:f64 = 0 as f64;
+    for char in 0..bin.chars().count(){
+        if bin.as_bytes()[char] as char == '1'{
+            let expo:f64 = (bin.chars().count() - char - 1) as f64;
+            decimal+= (2 as f64).powi(expo as f64 as i32);
+        }
+    }
+    return decimal.to_string();
+}
+
 
 #[cfg(test)]
 mod tests {
@@ -49,6 +60,12 @@ mod tests {
     fn str_2_dec() {
         let result = binary_str2dec("101".to_string());
         assert_eq!(result, 5);
+    }
+
+    #[test]
+    fn str_2_dec_str() {
+        let result = binary_str2dec_str("00101".to_string());
+        assert_eq!(result, "5");
     }
 
     #[test]
