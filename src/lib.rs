@@ -1,4 +1,4 @@
-pub fn dec2binary(mut decimal:i128, bit_length:i32) -> String {
+pub fn dec2binary(mut decimal:i128, fluff_zeroes:i32) -> String {
 
     let mut ret = "".to_string();
 
@@ -21,7 +21,7 @@ pub fn dec2binary(mut decimal:i128, bit_length:i32) -> String {
     }
 
     let mut fluff = "".to_string();
-    for _ in 0..bit_length {
+    for _ in 0..fluff_zeroes {
         fluff.push_str("0")
     }
 
