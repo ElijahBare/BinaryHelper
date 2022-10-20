@@ -29,7 +29,7 @@ pub fn dec2binary(mut decimal:i128, bit_length:i32) -> String {
     ret_final.to_string()
 }
 
-fn binary_str2dec(mut bin:String) -> i128 {
+pub fn binary_str2dec(mut bin:String) -> i128 {
     let mut decimal:f64 = 0 as f64;
     for char in 0..bin.chars().count(){
         if bin.as_bytes()[char] as char == '1'{
