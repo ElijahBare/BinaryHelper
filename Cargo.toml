@@ -1,6 +1,6 @@
 [package]
 name = "binary-helper"
-version = "0.1.3"
+version = "0.2.3"
 edition = "2021"
 authors = ["EBSmash"]
 license = "MIT"

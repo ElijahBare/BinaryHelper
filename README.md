@@ -8,8 +8,6 @@ This crate serves 2 purposes:
 
 ## Example
 ```rust
-use BinaryHelper::dec2binary;
-
 fn is_10_binary_check(x) -> String {
     let result = dec2binary(x,3);
     if result == "0001010"{
