@@ -9,7 +9,7 @@ This crate serves 2 purposes:
 ## Example
 ```rust
 fn is_10_binary_check(x) -> String {
-    let result = dec2binary(x,3);
+    let result = dec2binary(x);
     if result == "0001010"{
         "X is 10 (0001010 in binary)!".to_string()
     }
